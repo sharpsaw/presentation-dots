@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+def definitely_clear; puts "\ec" end
+def vspace; puts ?\n * 4 end
+def form_feed; definitely_clear; vspace end
+def pyfiglet phrase; system 'pyfiglet', phrase end
+def figlet phrase; system 'figlet', '-c', phrase end
+def pause_for_long_enough_to_switch_windows; sleep 2 end
+def hit_enter; $stdin.readline end
+def fig_with_read phrase; figlet phrase; hit_enter end
+
+form_feed
+pyfiglet '1 Month Later...'
+hit_enter
+# pause_for_long_enough_to_switch_windows
+
+form_feed
+fig_with_read 'Join'
+fig_with_read 'the'
+fig_with_read 'Legacy'
+fig_with_read 'Legends'
+fig_with_read 'at'
+fig_with_read 'PeopleAdmin'
+# clear
+# echo "[32m\n\n\n\n"
+# pyfiglet Y\'ALL ROCK, BROS\!
+# read; sleep 2
+# 
+# clear
+# echo -n "[31m\n\n\n\n"
+# pyfiglet 2 Decades Later...
+# read

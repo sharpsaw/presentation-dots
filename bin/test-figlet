@@ -1,0 +1,15 @@
+#!/bin/sh -x
+text="${1-Demo of $n}"
+pyfiglet $text
+for n in \
+        script \
+        small \
+        smslant big \
+        mini \
+        shadow \
+        smscript \
+        standard \
+        slant \
+        smshadow; do
+    figlet -c -f $n $text
+done
